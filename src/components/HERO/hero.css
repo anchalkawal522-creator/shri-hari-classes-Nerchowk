@@ -147,6 +147,10 @@ button.btn-2:hover {
     span.name-i {
         font-size: 48px;
     }
+    .hero{
+        background-image: none;
+        background-color: #c34a8772;
+    }
 
     .content-hero .goal {
         font-size: 22px;
@@ -163,7 +167,7 @@ button.btn-2:hover {
 
     .btn-1,
     button.btn-2 {
-        width: 100%;
+        width: 126%;
         max-width: 220px;
     }
 }

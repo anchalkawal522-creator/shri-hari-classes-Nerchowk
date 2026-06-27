@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./hero.css";
 
 function Hero() {
@@ -12,8 +13,10 @@ function Hero() {
                     <p className="goal">learn <span className='list-h'> • </span> achive<span> • </span> succeed</p>
                     <p className="peh-h">Quality education, experienced teachers and a supportive environment to help students achieve their dream</p>
                      <div className="btn-hero">
-                        <button className="btn-1">explore courses</button>
-                        <button className='btn-2'>contact us</button>
+                                 <Link to="/courses">
+ <button className="btn-1">explore courses</button></Link>
+                                  <Link to="/contact">
+<button className="btn-1">Contact us</button></Link>
                      </div>
                 </div>
                 </div>

@@ -18,7 +18,12 @@
   width: 300px;
   margin-bottom: 20px;
 }
-
+.footer-links li a,
+.footer-courses li a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
 .footer-logo p {
   color: #c9c9c9;
   line-height: 1.8;
