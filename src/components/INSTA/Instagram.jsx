@@ -1,6 +1,10 @@
 import "./instagram.css";
 import { FaSquareInstagram } from "react-icons/fa6";
 
+import g5 from "../../assets/g5.webp";
+import g2 from "../../assets/g2.webp";
+import g4 from "../../assets/g4.webp";
+
 function Instagram() {
 
   const openInstagram = () => {
@@ -9,6 +13,8 @@ function Instagram() {
       "_blank"
     );
   };
+
+  const images = [g5, g2, g4];
 
   return (
     <div className="instagram-section">
@@ -20,28 +26,14 @@ function Instagram() {
 
       <div className="instagram-grid">
 
-        <div className="insta-card" onClick={openInstagram}>
-          <img src="/public/g5.webp" alt="" />
-                    <div className="icon-insta">
-            <FaSquareInstagram  />
-
+        {images.map((img, index) => (
+          <div className="insta-card" key={index} onClick={openInstagram}>
+            <img src={img} alt={`insta-${index}`} />
+            <div className="icon-insta">
+              <FaSquareInstagram />
+            </div>
           </div>
-        </div>
-
-        <div className="insta-card" onClick={openInstagram}>
-          <img src="/g2.webp" alt="" />
-                    <div className="icon-insta">
-            <FaSquareInstagram  />
-
-          </div>
-        </div>
-                <div className="insta-card" onClick={openInstagram}>
-          <img src="/public/g4.webp" alt="" />
-          <div className="icon-insta">
-            <FaSquareInstagram  />
-
-          </div>
-        </div>
+        ))}
 
       </div>
 

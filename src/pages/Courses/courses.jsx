@@ -1,101 +1,120 @@
 import "./courses.css";
-
+import cbseImg from "../../assets/cbsc.jpg";
+import neetImg from "../../assets/neetcou.avif";
+import jeeImg from "../../assets/jee.avif";
+import engImg from "../../assets/eng enter.avif";
+import govtImg from "../../assets/govt.avif";
+import ndaImg from "../../assets/nda.avif";
+import icarImg from "../../assets/icar.avif";
+import nursingImg from "../../assets/nurcing.webp";
+import mnsImg from "../../assets/mns.avif";
+import nestImg from "../../assets/nest.avif";
+import physicsImg from "../../assets/physics.avif";
+import bioImg from "../../assets/bio.avif";
+import chemImg from "../../assets/cam.avif";
+import jeeMainImg from "../../assets/jee main.avif";
+import jeeAdvImg from "../../assets/jee adva.avif";
+import hpImg from "../../assets/hp b.avif";
+import neetCrashImg from "../../assets/neet crash.jpg";   
+import jeeCrashImg from "../../assets/jee cra.avif";
+import ndaCrashImg from "../../assets/nda cra.avif";
 function Courses() {
+
 const Courses = [
   {
     title: "CBSE Boards",
     desc: "Class 9th - 12th Preparation",
-    img: "/src/assets/cbsc.jpg",
+    img: cbseImg,
   },
   {
     title: "NEET",
     desc: "Medical Entrance Preparation",
-    img: "/src/assets/neetcou.avif",
+    img: neetImg,
   },
   {
     title: "JEE",
     desc: "Engineering Entrance Preparation",
-    img: "/src/assets/jee.avif",
+    img: jeeImg,
   },
   {
     title: "Engineering Entrance",
     desc: "Advanced Engineering Coaching",
-    img: "/src/assets/eng enter.avif",
+    img: engImg,
   },
   {
     title: "Government Exams",
     desc: "SSC, Banking & Other Exams",
-    img: "/src/assets/govt.avif",
+    img: govtImg,
   },
   {
     title: "NDA",
     desc: "National Defence Academy",
-    img: "/src/assets/nda.avif",
+    img: ndaImg,
   },
   {
     title: "ICAR",
     desc: "Agriculture Entrance Preparation",
-    img: "/src/assets/icar.avif",
+    img: icarImg,
   },
   {
     title: "Nursing",
     desc: "B.Sc Nursing Entrance Coaching",
-    img: "/src/assets/nurcing.webp",
+    img: nursingImg,
   },
   {
     title: "MNS",
     desc: "Military Nursing Services",
-    img: "/src/assets/mns.avif",
+    img: mnsImg,
   },
   {
     title: "IISER / NEST",
     desc: "Science Entrance Preparation",
-    img: "/src/assets/nest.avif",
+    img: nestImg,
   },
   {
     title: "Physics",
     desc: "Physics Olympiad & Board Exams",
-    img: "/src/assets/physics.avif",
+    img: physicsImg,
   },
   {
     title: "Biology",
     desc: "Biology Entrance & Board Exams",
-    img: "/src/assets/bio.avif",
+    img: bioImg,
   },
   {
     title: "Chemistry",
     desc: "Chemistry Entrance & Board Exams",
-    img: "/src/assets/cam.avif",
+    img: chemImg,
   },
   {
     title: "JEE Main",
     desc: "Complete JEE Main Preparation",
-    img: "/src/assets/jee main.avif",
+    img: jeeMainImg,
   },
   {
     title: "JEE Advanced",
     desc: "Advanced Level Preparation",
-    img: "/src/assets/jee adva.avif",
+    img: jeeAdvImg,
   },
   {
     title: "HP Board",
     desc: "HPBOSE Classes & Preparation",
-    img: "/src/assets/hp b.avif",
+    img: hpImg,
   },
   {
     title: "NEET Crash Course",
     desc: "Quick Revision & Test Series",
-    img: "/src/assets/neet crash.jpg",
+    img: neetCrashImg,
   },
   {
     title: "JEE Crash Course",
     desc: "Fast-track JEE Preparation",
-    img: "/src/assets/jee cra.avif",
+    img: jeeCrashImg,
   },
   {
     title: "NDA Crash Course",
     desc: "Special NDA Revision Program",
-    img: "/src/assets/nda cra.avif",
+    img: ndaCrashImg,
   },
 ];
   const openWhatsApp = () => {

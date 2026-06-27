@@ -1,14 +1,13 @@
 import "./gallery.css";
 
+import g2 from "../../assets/g2.webp";
+import g4 from "../../assets/g4.webp";
+import g5 from "../../assets/g5.webp";
+import gallery from "../../assets/gallery.webp";
+import gallery1 from "../../assets/gallery1.webp";
+
 function Gallery() {
-  const images = [
-    "../../../public/g2.webp",
-    "../../../public/g4.webp",
-    "../../../public/g5.webp",
-    "../../../public/gallery.webp",
-    "../../../public/g4.webp",
-    "../../../public/gallery1.webp",
-  ];
+  const images = [g2, g4, g5, gallery, gallery1];
 
   return (
     <div className="gallery-page">
@@ -17,7 +16,7 @@ function Gallery() {
       <div className="gallery-grid">
         {images.map((img, index) => (
           <div className="gallery-card" key={index}>
-            <img src={img} alt="" />
+            <img src={img} alt={`gallery-${index}`} />
           </div>
         ))}
       </div>

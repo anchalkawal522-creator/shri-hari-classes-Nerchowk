@@ -1,6 +1,8 @@
 import "./nav.css";
 import { Link } from "react-router-dom";
 
+import logo from "../../assets/image.png";
+
 function Navbar() {
 
   const openWhatsApp = () => {
@@ -16,35 +18,19 @@ function Navbar() {
     <div className="navbar">
       <div className="container">
         <div className="nav-all">
+
           <div className="logo">
-            <img src="/src/assets/image.png" alt="Logo" />
+            <img src={logo} alt="Logo" />
           </div>
 
           <div className="menu">
             <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-
-              <li>
-                <Link to="/courses">Courses</Link>
-              </li>
-
-              <li>
-                <Link to="/facilities">Facilities</Link>
-              </li>
-
-              <li>
-                <Link to="/gallery">Gallery</Link>
-              </li>
-
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/courses">Courses</Link></li>
+              <li><Link to="/facilities">Facilities</Link></li>
+              <li><Link to="/gallery">Gallery</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
 
               <button
                 onClick={openWhatsApp}
@@ -59,8 +45,10 @@ function Navbar() {
               >
                 WhatsApp
               </button>
+
             </ul>
           </div>
+
         </div>
       </div>
     </div>
