@@ -1,8 +1,9 @@
-import HERO from "../../components/HERO/Hero.jsx";
-import COURSES from "../../components/COURSES/Courses.jsx";
-import WHYUS from "../../components/WHYUS/Whyus.jsx";
-import TOPWHY from "../../components/TOPWHY/Whyustop.jsx";
-import INSTA from "../../components/INSTA/Instagram.jsx";
+import HERO from "../../components/HERO/hero";
+import COURSES from "../../components/COURSES/courses";
+import WHYUS from "../../components/WHYUS/whyus";
+import TOPWHY from "../../components/TOPWHY/whyustop";
+import INSTA from "../../components/INSTA/Instagram";
+
 export default function Home() {
   return (
     <>
@@ -12,6 +13,5 @@ export default function Home() {
       <INSTA />
       <WHYUS />
     </>
-    
-)
+  );
 }
