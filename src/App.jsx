@@ -1,13 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/NAVBAR/Navbar";
 
-import Home from "./pages/Home/Home";
+import Home from "./pages/Home/home";
 import About from "./pages/About/About";
-import Courses from "./pages/Courses/Courses";
-import Gallery from "./pages/Garrelry/Gallery";
-import Footer from "./components/Footer/Footer";
+import Courses from "./pages/Courses/courses";
+import Gallery from "./pages/Garrelry/gallery";
+import Footer from "./components/FOOTER/footer";
 import Contact from "./pages/contact/Contact";
 import Facilities from "./pages/Facility/Facility";
+
 function App() {
   return (
     <BrowserRouter>
@@ -20,8 +21,8 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/facilities" element={<Facilities />} />
-
       </Routes>
+
       <Footer />
     </BrowserRouter>
   );
