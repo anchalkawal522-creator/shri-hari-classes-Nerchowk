@@ -16,13 +16,16 @@ import {
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 
+import logo from "../../assets/image.png";
+
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
+
         {/* Logo */}
         <div className="footer-logo">
-          <img src="/src/assets/image.png" alt="Sri Hari Classes Logo" />
+          <img src={logo} alt="Sri Hari Classes Logo" />
 
           <p>
             Guiding students towards success with quality education,
@@ -30,24 +33,15 @@ function Footer() {
           </p>
 
           <div className="social-icons">
-            <div className="icon" aria-label="Facebook">
-              <FaFacebookF />
-            </div>
-
-            <div className="icon" aria-label="Instagram">
-              <FaInstagram />
-            </div>
-
-            <div className="icon" aria-label="YouTube">
-              <FaYoutube />
-            </div>
+            <div className="icon"><FaFacebookF /></div>
+            <div className="icon"><FaInstagram /></div>
+            <div className="icon"><FaYoutube /></div>
           </div>
         </div>
 
         {/* Quick Links */}
         <div className="footer-links">
           <h2>Quick Links</h2>
-
           <ul>
             <li className="active">Home</li>
             <li>About Us</li>
@@ -70,12 +64,12 @@ function Footer() {
             <li>NDA Coaching</li>
             <li>Government Exam Coaching</li>
           </ul>
+
           <Link to="/courses">
-          <button>
-            View All Courses
-            <MdKeyboardArrowRight />
-            
-          </button>
+            <button>
+              View All Courses
+              <MdKeyboardArrowRight />
+            </button>
           </Link>
         </div>
 
@@ -85,9 +79,7 @@ function Footer() {
 
           <div className="contact-item">
             <IoLocationOutline />
-            <p>
-              2nd Floor, near PNB, Ner Chowk, Ner, Himachal Pradesh 175008
-            </p>
+            <p>2nd Floor, near PNB, Ner Chowk, Himachal Pradesh 175008</p>
           </div>
 
           <div className="contact-item">
@@ -104,7 +96,9 @@ function Footer() {
             <IoGlobeOutline />
             <p>www.sriharidigitech.com</p>
           </div>
+
         </div>
+
       </div>
 
       <div className="footer-bottom">
@@ -116,6 +110,7 @@ function Footer() {
           <p>Terms & Conditions</p>
         </div>
       </div>
+
     </footer>
   );
 }
