@@ -16,7 +16,17 @@
     color:#777;
     margin-top:10px;
 }
-
+.icon-insta {
+    position: absolute;
+    bottom: 105px;
+    left: 44%;
+    font-size: 68px;
+    color: #ff007e;
+    opacity:0;
+}
+.insta-card:hover .icon-insta{
+    opacity:1;
+}
 .instagram-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -28,6 +38,7 @@
     border-radius:20px;
     cursor:pointer;
     height:320px;
+    position :relative;
 }
 
 .insta-card img{

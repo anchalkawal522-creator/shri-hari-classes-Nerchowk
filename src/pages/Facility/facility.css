@@ -1,38 +1,38 @@
-.facilities-section {
+.facility-page {
   padding: 80px 8%;
   background: #f8fafc;
 }
 
-.container {
+.facility-wrapper {
   max-width: 1200px;
   margin: auto;
 }
 
-.section-title {
+.facility-heading {
   text-align: center;
   margin-bottom: 50px;
 }
 
-.section-title h2 {
+.facility-heading h2 {
   font-size: 38px;
   color: #0f172a;
   margin-bottom: 15px;
 }
 
-.section-title p {
+.facility-heading p {
   color: #64748b;
   max-width: 650px;
   margin: auto;
   line-height: 1.7;
 }
 
-.facility-grid {
+.facility-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
 }
 
-.facility-card {
+.facility-item {
   background: #fff;
   padding: 35px 25px;
   border-radius: 16px;
@@ -41,41 +41,40 @@
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
-.facility-card:hover {
+.facility-item:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.facility-card .icon {
+.facility-icon {
   width: 75px;
   height: 75px;
   background: #2563eb;
-  color: white;
+  color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin: 0 auto 20px;
   font-size: 32px;
-  margin-bottom: 20px;
 }
 
-.facility-card h3 {
+.facility-title {
   margin-bottom: 12px;
   color: #1e293b;
 }
 
-.facility-card p {
+.facility-description {
   color: #64748b;
   line-height: 1.6;
 }
 
 @media (max-width: 768px) {
-  .section-title h2 {
+  .facility-heading h2 {
     font-size: 30px;
   }
 
-  .facilities-section {
+  .facility-page {
     padding: 60px 20px;
   }
 }

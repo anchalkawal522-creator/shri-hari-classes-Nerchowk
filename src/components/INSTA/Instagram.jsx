@@ -1,4 +1,5 @@
 import "./instagram.css";
+import { FaSquareInstagram } from "react-icons/fa6";
 
 function Instagram() {
 
@@ -21,13 +22,25 @@ function Instagram() {
 
         <div className="insta-card" onClick={openInstagram}>
           <img src="/public/g5.webp" alt="" />
+                    <div className="icon-insta">
+            <FaSquareInstagram  />
+
+          </div>
         </div>
 
         <div className="insta-card" onClick={openInstagram}>
           <img src="/g2.webp" alt="" />
+                    <div className="icon-insta">
+            <FaSquareInstagram  />
+
+          </div>
         </div>
                 <div className="insta-card" onClick={openInstagram}>
           <img src="/public/g4.webp" alt="" />
+          <div className="icon-insta">
+            <FaSquareInstagram  />
+
+          </div>
         </div>
 
       </div>
