@@ -1,8 +1,7 @@
 import "./courses.css";
-import { Link } from "react-router-dom";
 
 function Courses() {
-const courses = [
+const Courses = [
   {
     title: "CBSE Boards",
     desc: "Class 9th - 12th Preparation",
@@ -119,7 +118,7 @@ const courses = [
       </div>
 
       <div className="courses-grid">
-        {courses.map((course, index) => (
+        {Courses.map((course, index) => (
           <div className="course-card" key={index}>
             <img src={course.img} alt="" />
 

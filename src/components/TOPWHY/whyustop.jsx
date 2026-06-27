@@ -5,7 +5,7 @@ import { LuChartNoAxesCombined } from "react-icons/lu";
 import { LuMonitorCheck } from "react-icons/lu";
 import { AiFillSafetyCertificate } from "react-icons/ai";
 import "./twhy.css"
-export default function whyustop() {
+export default function Whyustop() {
   return (
     <div className='why-us'>
       <div className="container">

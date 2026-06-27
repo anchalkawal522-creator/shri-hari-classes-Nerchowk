@@ -1,6 +1,6 @@
 import "./why.css";
 import { Link } from "react-router-dom";
-function Section() {
+function Whyus() {
 
   return (
     <section className="results-testimonial-gallery">
@@ -97,4 +97,4 @@ function Section() {
   );
 }
 
-export default Section;
+export default Whyus;

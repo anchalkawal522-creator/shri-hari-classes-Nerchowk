@@ -1,4 +1,4 @@
-import "./about.css";
+import "./About.css";
 import { FaBookOpen, FaUsers, FaAward, FaBullseye } from "react-icons/fa";
 
 function About() {

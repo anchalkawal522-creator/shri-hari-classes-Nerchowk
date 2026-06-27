@@ -32,8 +32,7 @@ import {
   IoLocationOutline,
   IoCallOutline,
   IoNavigateOutline,
-  IoBookmarkOutline,
-  IoShareSocialOutline,
+
   IoTimeOutline,
 } from "react-icons/io5";
 
