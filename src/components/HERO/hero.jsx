@@ -1,6 +1,6 @@
 import "./hero.css";
 
-function hero() {
+function Hero() {
   return (
     <div className='hero'>
 
@@ -24,4 +24,4 @@ function hero() {
   )
 }
 
-export default hero
+export default Hero;

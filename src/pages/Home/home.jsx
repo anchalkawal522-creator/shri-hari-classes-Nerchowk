@@ -1,4 +1,4 @@
-import HERO from "../../components/HERO/hero.jsx";
+import HERO from "../../components/HERO/Hero.jsx";
 import COURSES from "../../components/COURSES/Courses.jsx";
 import WHYUS from "../../components/WHYUS/Whyus.jsx";
 import TOPWHY from "../../components/TOPWHY/Whyustop.jsx";

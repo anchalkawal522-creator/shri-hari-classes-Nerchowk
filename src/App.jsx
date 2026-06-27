@@ -4,7 +4,7 @@ import Navbar from "./components/NAVBAR/Navbar";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Courses from "./pages/Courses/Courses";
-import Gallery from "./pages/Garrelry/gallery";
+import Gallery from "./pages/Garrelry/Gallery";
 import Footer from "./components/FOOTER/Footer";
 import Contact from "./pages/contact/Contact";
 import Facilities from "./pages/Facility/Facility";
