@@ -1,0 +1,244 @@
+
+
+.courses{
+    width: 100%;
+    padding: 20px 50px;
+    font-family: sans-serif;
+    background-color: whitesmoke;
+}
+.why-us {
+    padding: 30px;
+    text-align: center;
+    background: whitesmoke;
+}
+
+.main-all-about{
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* LEFT ABOUT */
+
+.frist-about{
+    width: 28%;
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.heading-about h1{
+    font-size: 34px;
+    margin-bottom: 20px;
+    color:  blueviolet;
+}
+
+.heading-about p{
+    font-size: 18px;
+    line-height: 34px;
+    color: #555;
+}
+
+.bottom-about{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.icon-con-about{
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.icon-con-about h1{
+    color: blueviolet;
+    font-size: 28px;
+}
+
+.icon-con-about p{
+    font-size: 17px;
+    line-height: 28px;
+}
+
+/* COURSES */
+
+.second-courses{
+    width: 42%;
+}
+
+.all-courses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.box-course {
+    background: white;
+    padding: 2px 15px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+
+.box-course:hover{
+    transform: translateY(-5px);
+}
+
+.box-course h1{
+    font-size: 42px;
+    margin-bottom: 18px;
+    color: rgb(138, 38, 231);
+}
+
+.box-course p{
+    font-size: 17px;
+    line-height: 28px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* LOCATION */
+
+.third-location{
+    width: 30%;
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.address-section{
+    display: flex;
+    gap: 18px;
+}
+.link-item button {
+    /* padding: 0px 0; */
+    border: none;
+    background: none;
+    font-size: 20px;
+}
+.address-icon{
+    font-size: 30px;
+    color: #111;
+}
+
+.address-text p{
+    font-size: 17px;
+    line-height: 30px;
+    color: #222;
+}
+
+.address-text button{
+    margin-top: 18px;
+    padding: 12px 28px;
+    border: none;
+    background: blueviolet;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background: #e5e5e5;
+    margin: 25px 0;
+}
+
+.contact-links{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.link-item{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.link-item svg{
+    font-size: 25px;
+    color: #111;
+}
+
+.link-item p{
+    font-size: 20px;
+    color: #222;
+}
+
+.open-time{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.open-time svg{
+    font-size: 26px;
+}
+
+.open-time p{
+    font-size: 20px;
+    color: #222;
+}
+
+.open-time span{
+    color: green;
+    font-weight: 600;
+}
+
+.services h3{
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.services p{
+    font-size: 16px;
+    line-height: 30px;
+    color: #444;
+}
+
+
+
+@media(max-width:1200px){
+
+    .main-all-about{
+        flex-direction: column;
+    }
+
+    .frist-about,
+    .second-courses,
+    .third-location{
+        width: 100%;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .all-courses{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:500px){
+
+    .all-courses{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .heading-about h1{
+        font-size: 28px;
+    }
+
+}

@@ -1,0 +1,68 @@
+.courses-page{
+    padding:100px 8%;
+    background:#f8fafc;
+}
+
+.hero-course{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.hero-course h1{
+    font-size:55px;
+    color:#5b21b6;
+}
+
+.hero-course p{
+    color:gray;
+    margin-top:20px;
+}
+
+.courses-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.course-card{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.course-card:hover{
+    transform:translateY(-10px);
+}
+
+.course-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.course-content{
+    padding:30px;
+}
+
+.course-content h2{
+    color:#5b21b6;
+    margin-bottom:15px;
+}
+
+.course-content p{
+    color:gray;
+    line-height:28px;
+}
+
+.course-content button{
+    margin-top:20px;
+    width:150px;
+    height:50px;
+    border:none;
+    background:#5b21b6;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
