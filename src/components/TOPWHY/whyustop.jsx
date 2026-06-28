@@ -10,7 +10,7 @@ export default function Whyustop() {
     <div className='why-us'>
       <div className="container">
         <div className="heading">
-                  <h1>---why choose shri hari classes---</h1>
+                  <h1>---why choose sri hari classes---</h1>
 
         </div>
          <div className="bottom-hero">

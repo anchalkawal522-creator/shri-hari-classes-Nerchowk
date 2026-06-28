@@ -21,7 +21,7 @@ function Instagram() {
 
       <div className="heading-instagram">
         <h1>Follow Us On Instagram</h1>
-        <p>Latest updates from Shri Hari Classes</p>
+        <p>Latest updates from Sri Hari Classes</p>
       </div>
 
       <div className="instagram-grid">

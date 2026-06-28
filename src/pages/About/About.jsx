@@ -12,7 +12,7 @@ function About() {
         <h1>Shaping Futures Through Quality Education</h1>
 
         <p>
-          Shri Hari Classes is committed to providing quality education,
+          Sri Hari Classes is committed to providing quality education,
           experienced guidance and a positive learning environment that
           helps students achieve excellence in academics and competitive exams.
         </p>

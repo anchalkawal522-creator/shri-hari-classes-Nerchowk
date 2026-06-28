@@ -71,7 +71,7 @@ import {
 
             <div className="heading-about">
 
-              <h1>About Shri Hari Classes</h1>
+              <h1>About Sri Hari Classes</h1>
 
               <p>
                 Sri Hari Classes is one of the pioneer coaching institutes
