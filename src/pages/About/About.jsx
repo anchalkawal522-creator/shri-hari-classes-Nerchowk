@@ -58,7 +58,7 @@ function About() {
       <div className="stats-section">
 
         <div className="stat-box">
-          <h1>1000+</h1>
+          <h1>100+</h1>
           <p>Students Guided</p>
         </div>
 
@@ -68,12 +68,12 @@ function About() {
         </div>
 
         <div className="stat-box">
-          <h1>15+</h1>
+          <h1>10+</h1>
           <p>Expert Faculty</p>
         </div>
 
         <div className="stat-box">
-          <h1>10+</h1>
+          <h1>5+</h1>
           <p>Years Experience</p>
         </div>
 
