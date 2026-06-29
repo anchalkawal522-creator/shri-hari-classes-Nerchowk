@@ -63,7 +63,6 @@ function Footer() {
             <li><Link to="/courses">Courses</Link></li>
             <li><Link to="/results">Results</Link></li>
             <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/reviews">Reviews</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
