@@ -4,7 +4,6 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { IoLocationOutline, IoCallOutline, IoGlobeOutline } from "react-icons/io5";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
-
 import logo from "../../assets/image.png";
 
 function Footer() {
@@ -61,7 +60,6 @@ function Footer() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/courses">Courses</Link></li>
-            <li><Link to="/results">Results</Link></li>
             <li><Link to="/gallery">Gallery</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>
@@ -111,7 +109,7 @@ function Footer() {
 
       {/* BOTTOM */}
       <div className="footer-bottom">
-        <p>© 2024 Sri Hari Classes. All Rights Reserved.</p>
+        <p>© 2026 Sri Hari Classes. All Rights Reserved.</p>
 
         <div className="bottom-links">
           <Link to="/">Privacy Policy</Link>

@@ -66,13 +66,19 @@
 /* COURSES */
 
 .second-courses{
-    width: 42%;
+    width: 45%;
+        background: white;
+    padding:15px 20px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
 }
 
 .all-courses{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
+    align-items: center;
 }
 
 .box-course {
@@ -84,6 +90,7 @@
     display: flex;
     gap: 20px;
     align-items: center;
+    width: 184px;
 }
 
 
@@ -93,14 +100,13 @@
 }
 
 .box-course h1{
-    font-size: 42px;
+    font-size: 40px;
     margin-bottom: 18px;
     color: rgb(138, 38, 231);
 }
 
 .box-course p{
-    font-size: 17px;
-    line-height: 28px;
+    font-size: 16px;
     color: #333;
     font-weight: 500;
 }

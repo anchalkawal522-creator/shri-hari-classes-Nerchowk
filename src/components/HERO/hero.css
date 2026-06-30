@@ -143,13 +143,14 @@ button.btn-2:hover {
 }
 
 @media (max-width: 576px) {
+        .hero{
+        background-image: none;
+        background-color: #c34a8772;
+    }
+
     .content-hero h1,
     span.name-i {
         font-size: 48px;
-    }
-    .hero{
-        background-image: none;
-        background-color: #c34a8772;
     }
 
     .content-hero .goal {

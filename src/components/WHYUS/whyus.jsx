@@ -8,6 +8,8 @@ import chemistryStudent from "../../assets/chemisty student.png";
 import g4 from "../../assets/g4.webp";
 import g5 from "../../assets/g5.webp";
 import gallery from "../../assets/gallery.webp";
+import g10 from "../../assets/g10.webp"
+import g6 from "../../assets/g6.webp"
 
 function Whyus() {
 
@@ -16,6 +18,8 @@ function Whyus() {
     g4,
     g5,
     gallery,
+    g6,
+    g10
   ];
 
   return (
