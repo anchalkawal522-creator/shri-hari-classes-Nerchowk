@@ -4,7 +4,8 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { IoLocationOutline, IoCallOutline, IoGlobeOutline } from "react-icons/io5";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
-import logo from "../../assets/image.png";
+import logo from "../../assets/sri_footer-logo.png"
+;
 
 function Footer() {
 

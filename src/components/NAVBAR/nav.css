@@ -87,6 +87,45 @@
 .menu ul li a:hover {
   color: #16a34a;
 }
+/* Toggle button hidden on desktop */
+.toggle-btn {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 767px) {
+
+  .nav-all {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+
+  /* show toggle */
+  .toggle-btn {
+    display: block;
+  }
+
+  /* hide menu by default */
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  /* show menu when active */
+  .menu.active {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+}
 
 @media(max-width:992px){
 
@@ -100,17 +139,3 @@
 
 }
 
-@media(max-width:768px){
-
-    .nav-all{
-        flex-direction:column;
-        gap:20px;
-    }
-
-    .menu ul{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:18px;
-    }
-
-}
