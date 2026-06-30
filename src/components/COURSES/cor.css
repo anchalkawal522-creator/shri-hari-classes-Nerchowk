@@ -1,17 +1,18 @@
-
-
 .courses{
     width: 100%;
     padding: 20px 50px;
     font-family: sans-serif;
     background-color: whitesmoke;
 }
+
+/* WHY US SECTION */
 .why-us {
     padding: 30px;
     text-align: center;
     background: whitesmoke;
 }
 
+/* MAIN LAYOUT */
 .main-all-about{
     display: flex;
     gap: 30px;
@@ -19,7 +20,6 @@
 }
 
 /* LEFT ABOUT */
-
 .frist-about{
     width: 28%;
     background: white;
@@ -31,7 +31,7 @@
 .heading-about h1{
     font-size: 34px;
     margin-bottom: 20px;
-    color:  blueviolet;
+    color: blueviolet;
 }
 
 .heading-about p{
@@ -63,12 +63,11 @@
     line-height: 28px;
 }
 
-/* COURSES */
-
+/* COURSES SECTION */
 .second-courses{
     width: 45%;
-        background: white;
-    padding:15px 20px;
+    background: white;
+    padding: 15px 20px;
     border-radius: 18px;
     text-align: center;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
@@ -76,24 +75,26 @@
 
 .all-courses{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     align-items: center;
 }
 
+/* COURSE BOX */
 .box-course {
     background: white;
-    padding: 2px 15px;
+    padding: 15px;
     border-radius: 18px;
     text-align: center;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
     display: flex;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
-    width: 184px;
+
+    width: 100%;
+    transition: 0.3s;
 }
-
-
 
 .box-course:hover{
     transform: translateY(-5px);
@@ -101,7 +102,6 @@
 
 .box-course h1{
     font-size: 40px;
-    margin-bottom: 18px;
     color: rgb(138, 38, 231);
 }
 
@@ -112,7 +112,6 @@
 }
 
 /* LOCATION */
-
 .third-location{
     width: 30%;
     background: white;
@@ -125,12 +124,7 @@
     display: flex;
     gap: 18px;
 }
-.link-item button {
-    /* padding: 0px 0; */
-    border: none;
-    background: none;
-    font-size: 20px;
-}
+
 .address-icon{
     font-size: 30px;
     color: #111;
@@ -213,9 +207,17 @@
     color: #444;
 }
 
+/* =======================
+   RESPONSIVE DESIGN
+======================= */
 
 
-@media(max-width:1200px){
+@media(max-width: 1386px){
+    .all-courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width: 1200px){
 
     .main-all-about{
         flex-direction: column;
@@ -226,25 +228,52 @@
     .third-location{
         width: 100%;
     }
-
+      .all-courses{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-@media(max-width:768px){
 
-    .all-courses{
-        grid-template-columns: repeat(2,1fr);
+
+
+
+@media(max-width: 992px){
+    .main-all-about{
+        flex-direction: column;
+    }
+}
+
+/* Mobile layout */
+@media(max-width: 768px){
+
+    .courses{
+        padding: 20px;
     }
 
+
 }
 
-@media(max-width:500px){
+/* Small mobile */
+@media(max-width: 500px){
 
     .all-courses{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: 1fr;
     }
 
     .heading-about h1{
-        font-size: 28px;
+        font-size: 24px;
     }
 
+    .heading-about p{
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .icon-con-about h1{
+        font-size: 22px;
+    }
+
+    .icon-con-about p{
+        font-size: 15px;
+    }
 }
