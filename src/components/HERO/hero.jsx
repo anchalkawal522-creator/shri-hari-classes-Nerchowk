@@ -14,9 +14,9 @@ function Hero() {
                     <p className="peh-h">Quality education, experienced teachers and a supportive environment to help students achieve their dream</p>
                      <div className="btn-hero">
                                  <Link to="/courses">
- <button className="btn-1">explore courses</button></Link>
+                                  <button className="btn-1">explore courses</button></Link>
                                   <Link to="/contact">
-<button className="btn-1">Contact us</button></Link>
+                                  <button className="btn-1">Contact us</button></Link>
                      </div>
                 </div>
                 </div>
