@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import "./courses.css";
+
 import cbseImg from "../../assets/cbsc.jpg";
 import neetImg from "../../assets/neetcou.avif";
 import jeeImg from "../../assets/jee.avif";
@@ -15,120 +17,56 @@ import chemImg from "../../assets/cam.avif";
 import jeeMainImg from "../../assets/jee main.avif";
 import jeeAdvImg from "../../assets/jee adva.avif";
 import hpImg from "../../assets/hp b.avif";
-import neetCrashImg from "../../assets/neet crash.jpg";   
+import neetCrashImg from "../../assets/neet crash.jpg";
 import jeeCrashImg from "../../assets/jee cra.avif";
 import ndaCrashImg from "../../assets/nda cra.avif";
-function Courses() {
 
-const Courses = [
-  {
-    title: "CBSE Boards",
-    desc: "Class 9th - 12th Preparation",
-    img: cbseImg,
-  },
-  {
-    title: "NEET",
-    desc: "Medical Entrance Preparation",
-    img: neetImg,
-  },
-  {
-    title: "JEE",
-    desc: "Engineering Entrance Preparation",
-    img: jeeImg,
-  },
-  {
-    title: "Engineering Entrance",
-    desc: "Advanced Engineering Coaching",
-    img: engImg,
-  },
-  {
-    title: "Government Exams",
-    desc: "SSC, Banking & Other Exams",
-    img: govtImg,
-  },
-  {
-    title: "NDA",
-    desc: "National Defence Academy",
-    img: ndaImg,
-  },
-  {
-    title: "ICAR",
-    desc: "Agriculture Entrance Preparation",
-    img: icarImg,
-  },
-  {
-    title: "Nursing",
-    desc: "B.Sc Nursing Entrance Coaching",
-    img: nursingImg,
-  },
-  {
-    title: "MNS",
-    desc: "Military Nursing Services",
-    img: mnsImg,
-  },
-  {
-    title: "IISER / NEST",
-    desc: "Science Entrance Preparation",
-    img: nestImg,
-  },
-  {
-    title: "Physics",
-    desc: "Physics Olympiad & Board Exams",
-    img: physicsImg,
-  },
-  {
-    title: "Biology",
-    desc: "Biology Entrance & Board Exams",
-    img: bioImg,
-  },
-  {
-    title: "Chemistry",
-    desc: "Chemistry Entrance & Board Exams",
-    img: chemImg,
-  },
-  {
-    title: "JEE Main",
-    desc: "Complete JEE Main Preparation",
-    img: jeeMainImg,
-  },
-  {
-    title: "JEE Advanced",
-    desc: "Advanced Level Preparation",
-    img: jeeAdvImg,
-  },
-  {
-    title: "HP Board",
-    desc: "HPBOSE Classes & Preparation",
-    img: hpImg,
-  },
-  {
-    title: "NEET Crash Course",
-    desc: "Quick Revision & Test Series",
-    img: neetCrashImg,
-  },
-  {
-    title: "JEE Crash Course",
-    desc: "Fast-track JEE Preparation",
-    img: jeeCrashImg,
-  },
-  {
-    title: "NDA Crash Course",
-    desc: "Special NDA Revision Program",
-    img: ndaCrashImg,
-  },
-];
+const courseImages = {
+  "cbsc.jpg": cbseImg,
+  "neetcou.avif": neetImg,
+  "jee.avif": jeeImg,
+  "eng enter.avif": engImg,
+  "govt.avif": govtImg,
+  "nda.avif": ndaImg,
+  "icar.avif": icarImg,
+  "nurcing.webp": nursingImg,
+  "mns.avif": mnsImg,
+  "nest.avif": nestImg,
+  "physics.avif": physicsImg,
+  "bio.avif": bioImg,
+  "cam.avif": chemImg,
+  "jee main.avif": jeeMainImg,
+  "jee adva.avif": jeeAdvImg,
+  "hp b.avif": hpImg,
+  "neet crash.jpg": neetCrashImg,
+  "jee cra.avif": jeeCrashImg,
+  "nda cra.avif": ndaCrashImg,
+};
+
+function Courses() {
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/courses")
+      .then((res) => res.json())
+      .then((data) => setCourses(data))
+      .catch((err) => console.error(err));
+  }, []);
+
   const openWhatsApp = () => {
     const phoneNumber = "916230020555";
     const message =
       "Hello Shri Hari Classes, I want to know more about your courses.";
 
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
     window.open(url, "_blank");
   };
 
   return (
     <div className="courses-page">
-
       <div className="hero-course">
         <h1>Our Courses</h1>
         <p>
@@ -137,13 +75,15 @@ const Courses = [
       </div>
 
       <div className="courses-grid">
-        {Courses.map((course, index) => (
-          <div className="course-card" key={index}>
-            <img src={course.img} alt="" />
+        {courses.map((course) => (
+          <div className="course-card" key={course.id}>
+            <img
+              src={courseImages[course.image]}
+              alt={course.title}
+            />
 
             <div className="course-content">
               <h2>{course.title}</h2>
-
               <p>{course.desc}</p>
 
               <button onClick={openWhatsApp}>
@@ -153,7 +93,6 @@ const Courses = [
           </div>
         ))}
       </div>
-
     </div>
   );
 }

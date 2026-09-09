@@ -56,13 +56,13 @@
     line-height:28px;
 }
 
-.course-content button{
-    margin-top:20px;
-    width:150px;
-    height:50px;
-    border:none;
-    background:#5b21b6;
-    color:white;
-    border-radius:10px;
-    cursor:pointer;
+.course-content button {
+    color: #fff;
+    cursor: pointer;
+    background: #5b21b6;
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    margin-top: 20px;
 }
