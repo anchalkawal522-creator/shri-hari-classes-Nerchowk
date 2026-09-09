@@ -22,39 +22,50 @@ import jeeCrashImg from "../../assets/jee cra.avif";
 import ndaCrashImg from "../../assets/nda cra.avif";
 
 const courseImages = {
-  "cbsc.jpg": cbseImg,
-  "neetcou.avif": neetImg,
-  "jee.avif": jeeImg,
-  "eng enter.avif": engImg,
-  "govt.avif": govtImg,
-  "nda.avif": ndaImg,
-  "icar.avif": icarImg,
-  "nurcing.webp": nursingImg,
-  "mns.avif": mnsImg,
-  "nest.avif": nestImg,
-  "physics.avif": physicsImg,
-  "bio.avif": bioImg,
-  "cam.avif": chemImg,
-  "jee main.avif": jeeMainImg,
-  "jee adva.avif": jeeAdvImg,
-  "hp b.avif": hpImg,
-  "neet crash.jpg": neetCrashImg,
-  "jee cra.avif": jeeCrashImg,
-  "nda cra.avif": ndaCrashImg,
+  "CBSE Boards": cbseImg,
+  NEET: neetImg,
+  JEE: jeeImg,
+  "Engineering Entrance": engImg,
+  "Government Exams": govtImg,
+  NDA: ndaImg,
+  ICAR: icarImg,
+  Nursing: nursingImg,
+  MNS: mnsImg,
+  "IISER / NEST": nestImg,
+  Physics: physicsImg,
+  Biology: bioImg,
+  Chemistry: chemImg,
+  "JEE Main": jeeMainImg,
+  "JEE Advanced": jeeAdvImg,
+  "HP Board": hpImg,
+  "NEET Crash Course": neetCrashImg,
+  "JEE Crash Course": jeeCrashImg,
+  "NDA Crash Course": ndaCrashImg,
 };
 
 function Courses() {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/courses")
-      .then((res) => res.json())
-      .then((data) => setCourses(data))
-      .catch((err) => console.error(err));
+    fetch("https://shri-hari-classes-nerchowk-2.onrender.com/api/courses")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch courses");
+        }
+
+        return res.json();
+      })
+      .then((data) => {
+        setCourses(data.data);
+      })
+      .catch((err) => {
+        console.error("Error fetching courses:", err);
+      });
   }, []);
 
   const openWhatsApp = () => {
     const phoneNumber = "916230020555";
+
     const message =
       "Hello Shri Hari Classes, I want to know more about your courses.";
 
@@ -69,6 +80,7 @@ function Courses() {
     <div className="courses-page">
       <div className="hero-course">
         <h1>Our Courses</h1>
+
         <p>
           Expert Guidance • Best Faculty • Regular Tests • Doubt Sessions
         </p>
@@ -76,14 +88,15 @@ function Courses() {
 
       <div className="courses-grid">
         {courses.map((course) => (
-          <div className="course-card" key={course.id}>
+          <div className="course-card" key={course._id}>
             <img
-              src={courseImages[course.image]}
+              src={courseImages[course.title]}
               alt={course.title}
             />
 
             <div className="course-content">
               <h2>{course.title}</h2>
+
               <p>{course.desc}</p>
 
               <button onClick={openWhatsApp}>
