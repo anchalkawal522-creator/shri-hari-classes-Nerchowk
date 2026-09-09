@@ -10,8 +10,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// HOME
 app.get("/", (req, res) => {
-  
   res.json({
     success: true,
     message: "Shri Hari Classes API is running",
@@ -21,7 +21,9 @@ app.get("/", (req, res) => {
 // GET ALL COURSES
 app.get("/api/courses", async (req, res) => {
   try {
-    const courses = await Course.find().sort({ createdAt: -1 });
+    const courses = await Course.find()
+      .select("title desc")
+      .sort({ createdAt: -1 });
 
     res.status(200).json({
       success: true,
@@ -29,6 +31,8 @@ app.get("/api/courses", async (req, res) => {
       data: courses,
     });
   } catch (error) {
+    console.error("Error fetching courses:", error.message);
+
     res.status(500).json({
       success: false,
       message: "Failed to fetch courses",
@@ -39,7 +43,7 @@ app.get("/api/courses", async (req, res) => {
 // GET ONE COURSE
 app.get("/api/courses/:id", async (req, res) => {
   try {
-    const course = await Course.findById(req.params.id);
+    const course = await Course.findById(req.params.id).select("title desc");
 
     if (!course) {
       return res.status(404).json({
@@ -84,6 +88,8 @@ app.post("/api/courses", async (req, res) => {
       data: course,
     });
   } catch (error) {
+    console.error("Error creating course:", error.message);
+
     res.status(500).json({
       success: false,
       message: "Failed to create course",
@@ -122,6 +128,8 @@ app.put("/api/courses/:id", async (req, res) => {
       data: course,
     });
   } catch (error) {
+    console.error("Error updating course:", error.message);
+
     res.status(400).json({
       success: false,
       message: "Failed to update course",
@@ -153,6 +161,7 @@ app.delete("/api/courses/:id", async (req, res) => {
   }
 });
 
+// MONGODB CONNECTION
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
@@ -160,7 +169,7 @@ mongoose
 
     const PORT = process.env.PORT || 5000;
 
-    app.listen(PORT, () => {
+    app.listen(PORT, "0.0.0.0", () => {
       console.log(`Server running on port ${PORT}`);
     });
   })
